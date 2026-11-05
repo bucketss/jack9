@@ -1,0 +1,16 @@
+[package]
+name = "jack9"
+version = "1.2.0"
+edition = "2024"
+
+[dependencies]
+eframe = { version = "0.37.0", default-features = false, features = ["glow", "default_fonts"] }
+rfd = "0.17.2"
+
+[build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
